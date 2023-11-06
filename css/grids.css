@@ -8,14 +8,14 @@
 .carrosselCirculos{
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 1fr; /* Adjust the gap between carousel items as needed */
-    overflow-x: auto; /* Enable horizontal scrolling when the items exceed the container's width */
+    grid-gap: 1fr; 
+    overflow-x: auto; 
     white-space: nowrap;
 }
 
 .carrosselCirculos a {
     text-align: center;
-    display: inline-block; /* Ensure that the items are displayed inline and can be scrolled horizontally */
+    display: inline-block; 
 }
 
 .carrosselTrabalhos{
