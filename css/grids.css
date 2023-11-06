@@ -1,20 +1,19 @@
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(12, auto); /* 12 equal-width columns */
-    grid-gap: 10px; /* Gap between grid items */
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px; 
 }
 
 
 .carrosselCirculos{
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 10px; /* Adjust the gap between carousel items as needed */
+    grid-gap: 1fr; /* Adjust the gap between carousel items as needed */
     overflow-x: auto; /* Enable horizontal scrolling when the items exceed the container's width */
     white-space: nowrap;
 }
 
 .carrosselCirculos a {
-    padding: 10px;
     text-align: center;
     display: inline-block; /* Ensure that the items are displayed inline and can be scrolled horizontally */
 }
@@ -22,4 +21,11 @@
 .carrosselTrabalhos{
     display: grid;
     grid-auto-flow: column;
+}
+
+h1{
+    grid-column-start: 2;
+    grid-column: span 7fr;
+    margin-right: 4fr;
+    background-color: #e0e0e0;
 }
