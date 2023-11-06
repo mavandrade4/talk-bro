@@ -1,6 +1,6 @@
-.body{
+.grid-container{
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* 12 equal-width columns */
+    grid-template-columns: repeat(12, auto); /* 12 equal-width columns */
     grid-gap: 10px; /* Gap between grid items */
 }
 
