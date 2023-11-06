@@ -1,0 +1,16 @@
+.body{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 equal-width columns */
+    grid-gap: 10px; /* Gap between grid items */
+}
+
+
+.carrosselCirculos{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.carrosselTrabalhos{
+    display: grid;
+    grid-auto-flow: column;
+}
