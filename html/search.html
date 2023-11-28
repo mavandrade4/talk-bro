@@ -17,81 +17,88 @@
     </div>
 
     <!-- CONTEUDO -->
-    <div class="row between">
-        <table class="tb-center">
-            <tr>
-                <th>
-                    <h3>SEARCH</h3>
-                </th>
+    <div id="input-container">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="SEARCH" title="Type in a name">
         
-                <th>
-                    <h3>TAGS</h3>
-                </th>
-             
-                <th>
-                    <h3>AUTOR</h3>
-                </th>
-
-                <th>
-                    <h3>CLIENTE</h3>
-                </th>
-
-                <th>
-                    <h3>ANO</h3>
-                </th>
-            </tr>
-
-            <tr>
-                <th>
-                    <h4>FESTA DO EMIGRANTE</h4>
-                </th>
-        
-                <th>
-                    <h4>COMUNICAÇÃO | DESIGN GRÁFICO</h4>
-
-                </th>
-             
-                <th>
-                    <h4>BERNARDO</h4>
-                </th>
-
-                <th>
-                    <h4>RÁDIO UNIVERSIDADE DE COIMBRA</h4>
-                </th>
-
-                <th class="col-xs-1">
-                    <h4>2023</h4>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <h4>NOME</h4>
-                </th>
-        
-                <th>
-                    <h4>TAGS</h4>
-                </th>
-             
-                <th>
-                    <h4>AUTOR</h4>
-                </th>
-
-                <th>
-                    <h4>CLIENTE</h4>
-                </th>
-
-                <th class="col-xs-1">
-                    <h4>ANO</h4>
-                </th>
-            </tr>
-
-          </table>   
-    </div>
-    
+        </div>
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:20%;">NOME</th>
+            <th style="width:20%;">TAGS</th>
+            <th style="width:20%;">AUTOR</th>
+            <th style="width:20%;">CLIENTES</th>
+            <th style="width:10%;">ANO</th>
+          </tr>
+          <tr>
+            <td>Festa do Emigrante</td>
+            <td>Comunicação | Design</td>
+            <td>Bernardo Macedo</td>
+            <td>Rádio Universidade de Coimbra</td>
+            <td>2023</td>
+          </tr>
+          <tr>
+            <td>NOME</td>
+            <td>TAGS</td>
+            <td>AUTOR</td>
+            <td>CLIENTE</td>
+            <td>ANO</td>
+          </tr>
+          <tr>
+            <td>NOME</td>
+            <td>TAGS</td>
+            <td>AUTOR</td>
+            <td>CLIENTE</td>
+            <td>ANO</td>
+          </tr>
+          <tr>
+            <td>NOME</td>
+            <td>TAGS</td>
+            <td>AUTOR</td>
+            <td>CLIENTE</td>
+            <td>ANO</td>
+          </tr>
+          <tr>
+            <td>NOME</td>
+            <td>TAGS</td>
+            <td>AUTOR</td>
+            <td>CLIENTE</td>
+            <td>ANO</td>
+          </tr>
+         
+        </table>
+   
+      
     <!-- RODAPE -->
     <div id="footer">
         <p>FOOTER</p>
         <!-- TO DO -->
     </div>
+
+    <script>
+        function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+           input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            var match = false;
+                for (var j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                     txtValue = td[j].textContent || td[j].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          match = true;
+                                   }
+                                    }
+                                   }
+                                if (match) {
+                                   tr[i].style.display = "";
+                                   } else {
+                                   tr[i].style.display = "none";
+                                   }
+                                       }
+               }
+           </script>
 </body>
 </html>
