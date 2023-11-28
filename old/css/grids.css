@@ -1,0 +1,31 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px; 
+}
+
+
+.carrosselCirculos{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1fr; 
+    overflow-x: auto; 
+    white-space: nowrap;
+}
+
+.carrosselCirculos a {
+    text-align: center;
+    display: inline-block; 
+}
+
+.carrosselTrabalhos{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+h1{
+    grid-column-start: 2;
+    grid-column: span 7fr;
+    margin-right: 4fr;
+    background-color: #e0e0e0;
+}
