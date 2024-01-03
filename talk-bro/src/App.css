@@ -1,7 +1,50 @@
-.App {
-  text-align: center;
+/*------------------- HERO */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -10vh;
 }
 
+.hero{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay-logo {
+  position: absolute;
+  height: 15vh;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+}
+
+/*------------------- INTRO */
+
+.intro{
+  width: 30%;
+  height: auto;
+  margin: 30vh 10vh 30vh 90vh;
+}
+
+/*------------------- GRID */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display two columns */
+  gap: 20px;
+  margin: 0vh 3vh 0vh 3vh;
+}
+.work-in-grid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*-------------------  */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
