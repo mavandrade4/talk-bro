@@ -1,4 +1,46 @@
-.search-table{
-    width: 90%;
+/*----------------------  SEARCH*/
+.search-container {
+    margin: 20px;
+}
+
+.search-input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 3px solid #555;
+}
+
+.tag-checkbox {
+    margin-right: 10px;
+}
+
+/*----------------------  TABELA*/
+.search-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4vh;
+}
+
+.search-table th,
+.search-table td {
+    padding: 12px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-table td:first-child {
+    border-bottom: none;
+}
+
+.work-link {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: white;
+}
+
+.header th:hover {
+    background-color: white;
+    color: #110900;
 }
