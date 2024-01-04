@@ -1,12 +1,14 @@
 /*----------------------  SEARCH*/
 .search-container {
     margin: 20px;
+    padding: 2vh;
+    border: 3px solid #FFBE6D;
 }
 
 .search-input {
-    padding: 8px;
     margin-right: 10px;
-    border: 3px solid #555;
+    border-bottom: 2px solid #FFBE6D;
+    background-color: #110900;
 }
 
 .tag-checkbox {
@@ -15,7 +17,7 @@
 
 /*----------------------  TABELA*/
 .search-table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     margin: 4vh;
 }
