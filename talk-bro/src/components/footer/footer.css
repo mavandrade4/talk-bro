@@ -9,10 +9,18 @@
 }
 
 .footer-links{
-    width: 100%;
+    width: 70%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20%;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links{
+    width: 70%;
+    text-decoration: none;
+    color: #110900;
 }
 
 .social{

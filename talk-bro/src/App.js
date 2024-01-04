@@ -30,7 +30,7 @@ function App() {
     <div>
       <div class="hero-container">
         <img class="hero" src="img/hero.png" />
-        <img class="overlay-logo" src="img/logo_y.png"/>
+        <img class="overlay-logo" src="img/logo_y.svg"/>
       </div>
       <div class="intro">
         <p>

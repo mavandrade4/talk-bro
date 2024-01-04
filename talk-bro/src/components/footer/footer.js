@@ -28,7 +28,7 @@ function Footer() {
                 </div>
 
                 <div class="logo">
-                    <img src="img/logo_y.png" />
+                    <img src="img/logo_y.svg" />
                     <p>2023, TALKBROAGENCY.</p>
                 </div>
 

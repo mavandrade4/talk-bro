@@ -91,12 +91,13 @@ function SearchPage() {
                     <label>TAGS</label>
                     {['Vídeo','Comunicação','Design Gráfico','Press','Fotografia','Branding','Ilustração','Gestão de Projeto'].map(tag => 
                     (
-                        <label key={tag} className="tag-checkbox">
+                        <label key={tag} className="container">
                             <input
                                 type="checkbox"
                                 checked={selectedTags.includes(tag)}
                                 onChange={() => handleTagToggle(tag)}
                             />
+                            <span class="checkmark"></span>
                             {tag}
                         </label>
                     ))}
