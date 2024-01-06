@@ -1,4 +1,79 @@
-.work_detail{
-    height: 50px;
-    width: auto;
+
+.work_container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.title{
+    font-family: 'Crimson Text';
+    font-weight: bold;
+    font-size: 96px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+    margin:0;
+}
+
+.client{
+    font-family: 'Crimson Text';
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    line-height:  100%;
+    text-transform: uppercase;
+    margin:0;
+}
+
+.year{
+   font-family: 'Clash display'; 
+   margin-bottom: 10px;
+}
+
+/*-----------------------------imagens*/
+.imagedescript{
+    display: flex;
+    flex-direction: row;
+}
+.image {
+    flex-direction: column;
+    width: 600px;
+    padding-bottom: 80px;
+}
+
+.work_detail, .extra_img {
+    width: 600px;
+    margin-bottom: 20px; 
+}
+
+/*---------------------------descrição das img*/
+.descript{
+    flex-direction: column;
+    margin-left: 120px;
+    margin-right: 5%;
+}
+
+.description {
+    font-family: 'Alte Haas Grotesk';
+    font-size: 24px;
+    margin: 0;
+}
+
+.author {
+    font-family: 'Clash display';
+    text-transform: uppercase;
+}
+
+.tags {
+    font-family: 'Crimson Text';
+    font-size: 32px;
+    text-transform: uppercase;
 }

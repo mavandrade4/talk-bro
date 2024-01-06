@@ -6,19 +6,30 @@ function WorkPage() {
     console.log(state.metadata.extra_imgs);
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
-        <div>
-            <p>{state.metadata.title}</p>
-            <p>{state.metadata.client}</p>
-            <p>{state.metadata.description}</p>
-            <img className="work_detail" src={state.metadata.img.url}/>
-            <div class="extra-imgs">
-            {state.metadata.extra_imgs.map((item) => (
-                <img src={item.extra_img.url} class="extra_img"/>
-            ))}
+        <div className="work_container">
+            
+            <div className="text">
+                <p className="title">{state.metadata.title}</p>
+                <p className="client">{state.metadata.client}</p>
+                <p className="year">{state.metadata.year}</p>
             </div>
-            <p>{state.metadata.author}</p>
-            <p>{state.metadata.year}</p>
-            <p>{state.metadata.tags.join(',')}</p>
+
+            <div className="imagedescript">
+                <div className="image">
+                <img className="work_detail" src={state.metadata.img.url}/>
+              
+                    {state.metadata.extra_imgs.map((item) => (
+                     <img src={item.extra_img.url} class="extra_img"/>
+                     ))}
+               
+                </div>
+
+                <div className="descript">
+                <p className="description"> {state.metadata.description}</p>
+                <p className="tags">{state.metadata.tags.join(', ')}</p>
+                <p className="author">{state.metadata.author} </p>
+                </div>
+            </div>
         </div>
     );
 }
