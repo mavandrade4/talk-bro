@@ -5,26 +5,28 @@ function Footer() {
     return (
         <div className="footer" id="footer">
             <div class="call-to-action">
-                <p>LET'S WORK TOGETHER</p>
+                <p>LET'S  <span></span>  TOGETHER</p>
             </div>
             <div class="email">
-                <p>TALKBROAGENCY@GMAIL.COM * TALKBROAGENCY@GMAIL.COM * TALKBROAGENCY@GMAIL.COM * TALKBROAGENCY@GMAIL.COM *</p>{/*LINK PARA MANDAR EMAIL*/}
+                <a href="mailto:TALKBROAGENCY@GMAIL.COM" target="_blank" rel="noopener noreferrer">
+                    <p class="stroke">TALKBROAGENCY@GMAIL.COM</p>  <p> * TALKBROAGENCY@GMAIL.COM</p> <p class="stroke"> * TALKBROAGENCY@GMAIL.COM</p> <p>* TALKBROAGENCY@GMAIL.COM</p>
+                </a>
             </div>
-
+            
             <div className="footer-links">
                 <div class="social">
                     <Link to="https://www.instagram.com/talkbro.agency/"> {/*LINK PARA INSTA*/}
-                        <img src="img/insta.png" />
+                        <img src="img/insta_icon.svg" />
                     </Link>
-                    <Link to="https://www.tiktok.com/en/">{/*LINK PARA TIK TOK*/}
+                    {/*<Link to="https://www.tiktok.com/en/">{/*LINK PARA TIK TOK*
                         <img src="img/tiktok.png" />
                     </Link>
-                    <Link to="https://www.whatsapp.com/">{/*LINK PARA WPP*/}
+                    <Link to="https://www.whatsapp.com/">{/*LINK PARA WPP*
                         <img src="img/whatsapp.png" />
                     </Link>
-                    <Link to="https://www.youtube.com/">{/*LINK PARA YOUTUBE*/}
+                    <Link to="https://www.youtube.com/">{/*LINK PARA YOUTUBE
                         <img src="img/youtube.png" />
-                    </Link>
+                    </Link>*/}
                 </div>
 
                 <div class="logo">
@@ -34,7 +36,7 @@ function Footer() {
 
                 <div class="pages">
                     <Link to="/team">SOBRE NÓS</Link>
-                    <Link to="/contacts">CONTACTOS</Link>
+                    <Link to="/contacts">TRABALHOS</Link>
                 </div>
             </div>
         </div>
