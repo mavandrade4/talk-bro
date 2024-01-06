@@ -8,7 +8,7 @@ function Footer() {
                 <p>LET'S WORK TOGETHER</p>
             </div>
             <div class="email">
-                <p>EMAIL</p>{/*LINK PARA MANDAR EMAIL*/}
+                <p>TALKBROAGENCY@GMAIL.COM * TALKBROAGENCY@GMAIL.COM * TALKBROAGENCY@GMAIL.COM * TALKBROAGENCY@GMAIL.COM *</p>{/*LINK PARA MANDAR EMAIL*/}
             </div>
 
             <div className="footer-links">

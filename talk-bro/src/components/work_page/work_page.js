@@ -11,11 +11,11 @@ function WorkPage() {
             <p>{state.metadata.client}</p>
             <p>{state.metadata.description}</p>
             <img className="work_detail" src={state.metadata.img.url}/>
-            {/*state.metadata.extra_imgs.map((extra_img) => (
-                <div>
-                    <img key={extra_img.id} src={extra_img.url} className="extra_img"/>
-                </div>
-            ))*/}
+            <div class="extra-imgs">
+            {state.metadata.extra_imgs.map((item) => (
+                <img src={item.extra_img.url} class="extra_img"/>
+            ))}
+            </div>
             <p>{state.metadata.author}</p>
             <p>{state.metadata.year}</p>
             <p>{state.metadata.tags.join(',')}</p>
