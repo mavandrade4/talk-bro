@@ -3,6 +3,10 @@
     margin: 5vh;
     padding: 2vh;
     font-size: 20px;
+    font-family: 'Clash Display' ;
+    font-weight: regular;
+    text-transform: uppercase;
+    font-size: 12pt;
 }
 
 .search-input {
@@ -42,25 +46,29 @@
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+
+    outline-color: whitesmoke;
+    outline-style: solid;
+
+    margin-bottom: 6px;
+    margin-right: 6px;
+
   }
   
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
-    background-color: #ccc;
+    stroke: whitesmoke;
   }
   
   /* When the checkbox is checked, add a blue background */
   .container input:checked ~ .checkmark {
-    background-color: #FFBE6D;
+    background-color: whitesmoke;
   }
   
-  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Create the checkmark/indicator (hidden when not checked)
   .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
+    
+  } */
   
   /* Show the checkmark when checked */
   .container input:checked ~ .checkmark:after {
@@ -87,6 +95,10 @@
     border-collapse: collapse;
     margin: 4vh;
     font-size: 22px;
+    font-family: 'Clash Display' ;
+    font-weight: regular;
+    text-transform: uppercase;
+    font-size: 12pt;
 }
 
 .search-table th,
@@ -97,14 +109,13 @@
 }
 
 .search-table td:first-child {
-    border-bottom: none;
+   font-weight: bold;
 }
 
 .work-link {
     display: block;
     padding: 12px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
     text-decoration: none;
     color: white;
 }
