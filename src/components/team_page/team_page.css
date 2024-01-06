@@ -23,11 +23,13 @@
 
 .page_title {
     font-family: 'Crimson text';
-    width: 100%;
+    width: 40%;
     height: auto;
-    text-align: center;
+    text-align: left;
     font-size: 40px;
+    margin-left: 5vh;
 }
+
 .page_desc {
     font-family: 'Alte Haas Grotesk';
     width: 30%;
@@ -37,13 +39,6 @@
     justify-content: right;
     padding: 5% 5% 5% 50%;
     margin: 0 auto;
-}
-
-@media only screen and (max-width: 767px) {
-    .page_desc {
-        width: 90%;
-        height: auto;
-    }
 }
 
 /*--------------------TEAM CAROUSEL */
@@ -118,4 +113,19 @@
     width: auto;
     display: block;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .page_title {
+        width: 70%;
+    }
+    .page_desc {
+        width: 90%;
+        height: auto;
+    }
+    .carousel-work, .carousel-team {
+        width: 100%;
+        margin: 0 auto;
+        gap: 1vh;
+    }
 }
