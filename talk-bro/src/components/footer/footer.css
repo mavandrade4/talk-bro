@@ -56,6 +56,7 @@
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .pages a {
     text-decoration: none;
     color: whitesmoke;
@@ -66,3 +67,8 @@
 .pages a:hover {
     color: #ff9900;
 }
+=======
+email{
+    font-size: small;
+}
+>>>>>>> 324d46cf659afc4fc349bd1a3f31072db1e89516
