@@ -3,9 +3,8 @@
     align-items: stretch;
     padding: 0 5vh 0 5vh;
     gap: 3vh;
-    max-height: 100vh;
-    margin-top: 50px;
-    margin-left: 0;
+    max-height: 70vh;
+    margin: 50px 0 0 0;
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: thin; /* Firefox */
@@ -33,25 +32,32 @@
     font-family: 'Alte Haas Grotesk';
     width: 30%;
     height: auto;
-    gap: 4vh;
+    max-height: 40vh;
+    gap: 3vh;
     justify-content: right;
     padding: 5% 5% 5% 50%;
     margin: 0 auto;
 }
 
+@media only screen and (max-width: 767px) {
+    .page_desc {
+        width: 90%;
+        height: auto;
+    }
+}
+
 /*--------------------TEAM CAROUSEL */
 
 .team-item {
-    height: 40vh;
-    width: auto;
-    text-align: center;
-    margin: 0 auto;
+    height: 30vh;
+    width: 30vh;
+    margin: 0 0 0 0;
 }
 
 .team-img {
-    width: 50vh;
-    height: 50vh;
-    max-height: 40vh;
+    height: 100%;
+    width: auto;
+    max-height: 100%;
     display: block;
     margin: 0 auto;
     border-radius: 60%;
