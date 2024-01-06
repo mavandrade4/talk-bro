@@ -7,13 +7,13 @@ function WorkPage() {
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
         <div>
-            <p>{state.metadata.title}</p>
-            <p>{state.metadata.client}</p>
-            <p>{state.metadata.info}</p>
-            <img class="work_detail" src={state.metadata.img.url}/>
+            <p className="work_title">{state.metadata.title}</p>
+            <p className="work_client">{state.metadata.client}</p>
+            <p className="work_info">{state.metadata.info}</p>
+            <img className="work_detail" src={state.metadata.img.url}/>
             <p>{state.metadata.autor}</p>
         </div>
     );
 }
 
-export default WorkPage;
+export default WorkPage; 

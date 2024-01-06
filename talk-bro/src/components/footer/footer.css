@@ -1,4 +1,4 @@
-.footer{
+  .footer{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,6 @@
     width: 20px;
     height: auto;
     padding: 5px;
-    
     align-items: center;
 }
 
@@ -49,9 +48,21 @@
     margin: 0 auto;
 }
 
-.pages{
+.pages {
+    font-family: 'Clash Display';
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
+}
+
+.pages a {
+    text-decoration: none;
+    color: whitesmoke;
+    white-space: nowrap;
+
+}
+
+.pages a:hover {
+    color: #ff9900;
 }

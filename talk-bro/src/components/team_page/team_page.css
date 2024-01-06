@@ -23,12 +23,14 @@
 /*--------------------TEAM INTRO */
 
 .page_title {
+    font-family: 'Crimson text';
     width: 100%;
     height: auto;
     text-align: center;
     font-size: 40px;
 }
 .page_desc {
+    font-family: 'Alte Haas Grotesk';
     width: 30%;
     height: auto;
     gap: 4vh;
@@ -92,6 +94,7 @@
 
 /* bio membro */
 .detail-bio{
+    font-family: 'Alte Haas Grotesk';
     font-size: 15px;
     margin: 0 10% 10% 0;
 }

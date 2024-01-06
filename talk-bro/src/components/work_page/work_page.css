@@ -2,3 +2,18 @@
     height: 50px;
     width: auto;
 }
+
+.work_title {
+    font-family: 'Crimson text';
+    font-size: 96px;
+}
+
+.work_client {
+    font-family: 'Crimson text';
+    font-size: 32px;
+}
+
+.work_info{
+    font-family: 'Alte Haas Grotesk';
+
+}

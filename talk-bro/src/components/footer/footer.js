@@ -32,7 +32,7 @@ function Footer() {
                     <p>2023, TALKBROAGENCY.</p>
                 </div>
 
-                <div clas="pages">
+                <div class="pages">
                     <Link to="/team">SOBRE NÓS</Link>
                     <Link to="/contacts">CONTACTOS</Link>
                 </div>
