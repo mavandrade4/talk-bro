@@ -19,6 +19,7 @@
     margin: 0 auto;
     text-decoration: none;
     color: #110900;
+    align-items: center;
 }
 
 .navbar-links a {
@@ -29,23 +30,25 @@
     font-size: 20px;
     text-decoration: none;
 }
-  
-.search-container {
-position: relative;
+
+.navbar-img {
+    height: 6vh;
+    width: auto;
+    margin-right: 15px;
 }
 
-.search-icon {
-cursor: pointer;
+
+.navbar-search {
+    height: 3vh;
+    width: auto;
+    margin-right: 15px;
 }
 
-form {
-position: absolute;
-top: 100%;
-left: 0;
-display: flex;
-align-items: center;
-}
-
-input {
-margin-left: 5px;
+@media only screen and (max-width: 767px) {
+    .navbar-links {
+        width: 100%;
+    }
+    .navbar-links a {
+        font-size: 15px;
+    }
 }
