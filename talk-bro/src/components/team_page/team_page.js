@@ -68,7 +68,6 @@ function TeamPage() {
                 <div class="member-detail">
                     <div class="member-imgs">
                         <img class="detail-img" src={selectedMember.metadata.img.url}></img>
-                        <img class="detail-tag" src={selectedMember.metadata.name_tag.url}></img>
                     </div>
                     <p class="detail-bio">{selectedMember.metadata.bio}</p>
                 </div>
