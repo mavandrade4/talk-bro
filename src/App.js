@@ -42,7 +42,7 @@ function App() {
           {data ? (
             data.map((item) => (
               <div className="image-item" key={item._id}>
-                <Link to='/work' state={item}>
+                <Link to='/talk-bro/work' state={item}>
                   <img class="work-in-grid" src={item.metadata.img.url} />
                 </Link>
               </div>
