@@ -1,10 +1,10 @@
 .carousel-work, .carousel-team {
     display: flex;
     align-items: stretch;
-    padding: 0 5vh 0 5vh;
-    gap: 3vh;
+    padding: 3vh 5vh 3vh 5vh;
+    gap: 4vh;
     max-height: 70vh;
-    margin: 50px 0 0 0;
+    margin: 0 auto;
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: thin; /* Firefox */
@@ -21,32 +21,43 @@
 
 /*--------------------TEAM INTRO */
 
-.page_title {
-    font-family: 'Crimson text';
-    width: 40%;
-    height: auto;
-    text-align: left;
-    font-size: 40px;
-    margin-left: 5vh;
+.info-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 8vh 0;
 }
 
-.page_desc {
+.page-title {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-size: 96px;
+    width: 70%;
+    height: auto;
+}
+
+.page-desc {
     font-family: 'Alte Haas Grotesk';
-    width: 30%;
+    font-size: 24px;
+    width: 50vh;
     height: auto;
     max-height: 40vh;
-    gap: 3vh;
-    justify-content: right;
-    padding: 5% 5% 5% 50%;
-    margin: 0 auto;
+    padding: 0 0 0 30%;
 }
 
 /*--------------------TEAM CAROUSEL */
 
 .team-item {
+    position: relative;
     height: 30vh;
     width: 30vh;
     margin: 0 0 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-item.selected {
+    transform: scale(1.2); /* Scale up the selected item */
 }
 
 .team-img {
@@ -58,39 +69,23 @@
     border-radius: 60%;
 }
 
-/*--------------------MEMBER DETAIL */
+/*--------------------MEMBER DETAIL 
 
-/* grupo (foto + tag) + bio */
+/* foto + bio */
 .member-detail{
     display: flex;
     display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 4vh;
     justify-content: left;
-    margin: 3% 3% 3% 3%;
+    margin: 3% 3% 3% 10%;
 }
 
-/* grupo foto + tag */
-.member-imgs{
-    height: 100%;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 3% 3% 5% 3%;
-}
-
-/* foto */
-.detail-img{
-    width: 80%;
-    max-height: 80%;
-}
-
-/* name tag */
-.detail-tag{
-    width: 80%;
-    max-height: 20%;
-    margin-top: -4vh;
+/* nome membro */
+.detail-name{
+    font-family: 'Alte Haas Grotesk';
+    font-size: 30px;
+    margin: 0 10% 10% 0;
 }
 
 /* bio membro */
@@ -98,6 +93,15 @@
     font-family: 'Alte Haas Grotesk';
     font-size: 15px;
     margin: 0 10% 10% 0;
+}
+
+/* tags membro */
+.detail-tag{
+    font-family: 'Crimson Text';
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 5vh;
 }
 
 /*--------------------WORK CAROUSEL */
@@ -126,6 +130,6 @@
     .carousel-work, .carousel-team {
         width: 100%;
         margin: 0 auto;
-        gap: 1vh;
+        gap: 4vh;
     }
 }

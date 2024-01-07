@@ -26,7 +26,7 @@ function WorkPage() {
 
                 <div className="descript">
                 <p className="description"> {state.metadata.description}</p>
-                <p className="tags">{state.metadata.tags.join(', ')}</p>
+                <p className="tags">{state.metadata.tags.join(' * ')}</p>
                 <p className="author">{state.metadata.author} </p>
                 </div>
             </div>

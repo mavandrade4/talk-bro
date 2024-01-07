@@ -29,7 +29,10 @@ function App() {
   return (
     <div>
       <div class="hero-container">
-        <img class="hero" src="img/hero.png" />
+        <video width="640" height="360" controls>
+            <source src="hero.mp4" type="video/mp4" class="hero"/>
+            Your browser does not support the video tag.
+        </video>
         <img class="overlay-logo" src="img/logo_y.svg"/>
       </div>
       <div class="intro">

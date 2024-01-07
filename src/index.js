@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
@@ -11,6 +10,7 @@ import WorkPage from './components/work_page/work_page';
 import TeamPage from './components/team_page/team_page';
 import SearchPage from './components/search_page/search_page';
 import Root from './components/root';
+import './index.css';
 
 const router = createBrowserRouter([
   {

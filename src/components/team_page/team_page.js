@@ -48,17 +48,23 @@ function TeamPage() {
     //////////////////////////////////////////////// PAGINA EQUIPA
     return (
         <div>
-            <p class="page_title">QUERES FAZER PARTE DA NOSSA EQUIPA?</p>
-            <p class="page_desc">A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nivel nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.</p>
-            <div className="carousel-team">
+            <div class="info-container">
+                <p class="page-title">QUERES FAZER PARTE DA NOSSA EQUIPA?</p>
+                <p class="page-desc">A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nivel nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.</p>
+            </div>
+            <div class="carousel-team">
             {team && (
                     team.map((member) => (
-                    <div className="team-item">
-                        {<img 
-                            class="team-img" 
+                    <div
+                        key={member.id}
+                        className={`team-item ${selectedMember && selectedMember.id === member.id ? 'selected' : ''}`}
+                        onClick={() => setMember(member)}
+                    >
+                        <img
+                            className="team-img"
                             src={member.metadata.img.url}
-                            onClick={() => setMember(member)} 
-                        />}
+                            alt={member.metadata.name}
+                        />
                     </div>
                     ))
                 )
@@ -66,10 +72,11 @@ function TeamPage() {
             </div>
                 { selectedMember && (
                 <div class="member-detail">
-                    <div class="member-imgs">
-                        <img class="detail-img" src={selectedMember.metadata.img.url}></img>
+                    <div>
+                        <p class="detail-name">{selectedMember.metadata.name}</p>
+                        <p class="detail-tag">{selectedMember.metadata.tags.join(" * ")}</p>
+                        <p class="detail-bio">{selectedMember.metadata.bio}</p>
                     </div>
-                    <p class="detail-bio">{selectedMember.metadata.bio}</p>
                 </div>
             ) }
             <div className="carousel-work">
