@@ -27,39 +27,42 @@ function WorkPage() {
         fetchWorks();
     }, []);
 
+    const filteredWorks = works && works.filter(item => item.id !== state.id);
+    console.log(filteredWorks);
+
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
-        <div className="work_container">
-            
-            <div className="text">
-                <p className="title">{state.metadata.title}</p>
-                <p className="client">{state.metadata.client}</p>
-                <p className="year">{state.metadata.year}</p>
-            </div>
-            <div className="imagedescript">
-                <div className="image">
-                <img className="work_detail" src={state.metadata.img.url}/>
-                    {state.metadata.extra_imgs.map((item) => (
-                     <img src={item.extra_img.url} class="extra_img"/>
-                     ))}
+        <div>
+            <div className="work-container">
+                <div className="text">
+                    <p className="title">{state.metadata.title}</p>
+                    <p className="client">{state.metadata.client}</p>
+                    <p className="year">{state.metadata.year}</p>
                 </div>
-                <div className="descript">
-                <p className="description"> {state.metadata.description}</p>
-                <p className="tags">{state.metadata.tags.join(' * ')}</p>
-                <p className="author">{state.metadata.author} </p>
+                <div className="imagedescript">
+                    <div className="image">
+                    <img className="work-detail" src={state.metadata.img.url}/>
+                        {state.metadata.extra_imgs.map((item) => (
+                        <img src={item.extra_img.url} class="extra-img"/>
+                        ))}
+                    </div>
+                    <div className="descript">
+                    <p className="description"> {state.metadata.description}</p>
+                    <p className="tags">{state.metadata.tags.join(' * ')}</p>
+                    <p className="author">{state.metadata.author} </p>
+                    </div>
                 </div>
             </div>
             <div className="carousel-work">
-            {works && (
-                    works.map((item) => ( 
-                    <div className="work-item">
-                        <Link to='/work' state={item}>
-                            {<img class="work-img" src={item.metadata.img.url} />}
-                        </Link>
-                    </div>
+                {filteredWorks && (
+                    filteredWorks.map((item) => (
+                        <div className="work-item" key={item._id}>
+                            <Link to='/work' state={item}>
+                                {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
+                            </Link>
+                        </div>
                     ))
-                )
-            }
+                )}
             </div>
         </div>
     );
