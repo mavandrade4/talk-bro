@@ -28,7 +28,6 @@ function WorkPage() {
     }, []);
 
     const filteredWorks = works && works.filter(item => item.id !== state.id);
-    console.log(filteredWorks);
 
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
@@ -56,7 +55,7 @@ function WorkPage() {
             <div className="carousel-work">
                 {filteredWorks && (
                     filteredWorks.map((item) => (
-                        <div className="work-item" key={item._id}>
+                        <div className="work-item" key={item.id}>
                             <Link to='/talk-bro/work' state={item}>
                                 {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
                             </Link>
