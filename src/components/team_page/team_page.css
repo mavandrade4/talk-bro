@@ -15,8 +15,9 @@
     width: 0.2rem;
 }
 
-.carousel-work::-webkit-scrollbar::-webkit-scrollbar-thumb, carousel-team::-webkit-scrollbar-thumb {
+.carousel-work::-webkit-scrollbar, carousel-team::-webkit-scrollbar-thumb {
     background-color: transparent;
+    display: none;
 }
 
 /*--------------------TEAM INTRO */
