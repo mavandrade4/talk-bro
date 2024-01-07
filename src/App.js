@@ -29,10 +29,8 @@ function App() {
   return (
     <div>
       <div class="hero-container">
-        <video controls loop autoplay class='videoH'>
-            <source src="img/hero.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-        </video>
+        <img src="img/hero.gif" class='videoH' />
+            
         {/*<img class="overlay-logo" src="img/logo_y.svg"/>*/}
       </div>
       <div class="intro">
