@@ -45,6 +45,14 @@ function TeamPage() {
         fetchTeam();
     }, []);
 
+    function handleTeamMemberClick(member) {
+        if (selectedMember && selectedMember.id === member.id) {
+            setMember(null);
+        } else {
+            setMember(member);
+        }
+    }
+
     //////////////////////////////////////////////// PAGINA EQUIPA
     return (
         <div>
@@ -58,7 +66,7 @@ function TeamPage() {
                     <div
                         key={member.id}
                         className={`team-item ${selectedMember && selectedMember.id === member.id ? 'selected' : ''}`}
-                        onClick={() => setMember(member)}
+                        onClick={() => handleTeamMemberClick(member)}
                     >
                         <img
                             className="team-img"
@@ -81,7 +89,7 @@ function TeamPage() {
             ) }
             <div className="carousel-work">
             {works && (
-                    works.map((item) => (
+                    works.map((item) => ( 
                     <div className="work-item">
                         <Link to='/work' state={item}>
                             {<img class="work-img" src={item.metadata.img.url} />}

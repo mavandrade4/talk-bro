@@ -13,17 +13,13 @@ function WorkPage() {
                 <p className="client">{state.metadata.client}</p>
                 <p className="year">{state.metadata.year}</p>
             </div>
-
             <div className="imagedescript">
                 <div className="image">
                 <img className="work_detail" src={state.metadata.img.url}/>
-              
                     {state.metadata.extra_imgs.map((item) => (
                      <img src={item.extra_img.url} class="extra_img"/>
                      ))}
-               
                 </div>
-
                 <div className="descript">
                 <p className="description"> {state.metadata.description}</p>
                 <p className="tags">{state.metadata.tags.join(' * ')}</p>
