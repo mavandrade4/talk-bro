@@ -43,7 +43,7 @@ function WorkPage() {
                     <div className="image">
                     <img className="work-detail" src={state.metadata.img.url}/>
                         {state.metadata.extra_imgs.map((item) => (
-                        <img src={item.extra_img.url} class="extra_img"/>
+                        <img src={item.extra_img.url} class="extra-img"/>
                         ))}
                     </div>
                     <div className="descript">
