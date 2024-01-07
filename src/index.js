@@ -11,6 +11,7 @@ import TeamPage from './components/team_page/team_page';
 import SearchPage from './components/search_page/search_page';
 import Root from './components/root';
 import './index.css';
+import LocomotiveScroll from 'locomotive-scroll';
 
 const router = createBrowserRouter([
   {
