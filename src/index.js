@@ -14,7 +14,7 @@ import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/talk-bro/",
     element: <Root />,
     children: [
       {
@@ -22,15 +22,15 @@ const router = createBrowserRouter([
         element: <App />
       },
       {
-        path: "/work",
+        path: "/talk-bro/work",
         element: <WorkPage />,
       },
       {
-        path: "/team",
+        path: "/talk-bro/team",
         element: <TeamPage />,
       },
       {
-        path: "/search",
+        path: "/talk-bro/search",
         element: <SearchPage />,
       },
     ]
