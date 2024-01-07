@@ -16,18 +16,16 @@ function WorkPage() {
 
             <div className="imagedescript">
                 <div className="image">
-                <img className="work_detail" src={state.metadata.img.url}/>
-              
+                    <img className="work_detail" src={state.metadata.img.url}/>
                     {state.metadata.extra_imgs.map((item) => (
-                     <img src={item.extra_img.url} class="extra_img"/>
-                     ))}
-               
+                    <img src={item.extra_img.url} class="extra_img"/>
+                    ))}
                 </div>
 
                 <div className="descript">
-                <p className="description"> {state.metadata.description}</p>
-                <p className="tags">{state.metadata.tags.join(' * ')}</p>
-                <p className="author">{state.metadata.author} </p>
+                    <p className="description"> {state.metadata.description}</p>
+                    <p className="tags">{state.metadata.tags.join(' * ')}</p>
+                    <p className="author">{state.metadata.author} </p>
                 </div>
             </div>
         </div>
