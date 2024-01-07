@@ -1,4 +1,4 @@
-.work_container{
+.work-container{
     display: flex;
     flex-direction: column;
     margin-left: 20%;
@@ -48,7 +48,7 @@
     padding-bottom: 80px;
 }
 
-.work_detail, .extra_img {
+.work-detail, .extra_img {
     width: 600px;
     margin-bottom: 20px; 
 }
