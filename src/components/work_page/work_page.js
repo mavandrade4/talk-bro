@@ -57,7 +57,7 @@ function WorkPage() {
                 {filteredWorks && (
                     filteredWorks.map((item) => (
                         <div className="work-item" key={item._id}>
-                            <Link to='/work' state={item}>
+                            <Link to='/talk-bro/work' state={item}>
                                 {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
                             </Link>
                         </div>

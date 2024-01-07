@@ -91,7 +91,7 @@ function TeamPage() {
             {works && (
                     works.map((item) => ( 
                     <div className="work-item">
-                        <Link to='/work' state={item}>
+                        <Link to='/talk-bro/work' state={item}>
                             {<img class="work-img" src={item.metadata.img.url} />}
                         </Link>
                     </div>

@@ -134,7 +134,7 @@ function SearchPage() {
                     {sortedData.map((item) => (
                         <tr key={item._id}>
                             <td className="first-column">
-                                <Link to='/work' state={item} className="work-link">
+                                <Link to='/talk-bro/work' state={item} className="work-link">
                                     {item.metadata.title}
                                 </Link>
                             </td>

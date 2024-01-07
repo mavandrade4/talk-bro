@@ -35,8 +35,8 @@ function Footer() {
                 </div>
 
                 <div class="pages">
-                    <Link to="/team">SOBRE NÓS</Link>
-                    <Link to="/contacts">TRABALHOS</Link>
+                    <Link to="/talk-bro/team">SOBRE NÓS</Link>
+                    <Link to="/talk-bro/">TRABALHOS</Link>
                 </div>
             </div>
         </div>
