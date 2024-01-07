@@ -46,6 +46,11 @@
   display: block;
 }
 
+p{
+  font-family: 'Alte Haas Grotesk';
+  font-size: 20pt;
+}
+
 /*-------------------  */
 .App-logo {
   height: 40vmin;
