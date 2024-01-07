@@ -10,8 +10,11 @@
 }
 
 .search-input {
-  width: 90%;
-  border-bottom: 2px solid #FFBE6D;
+  width: 30%;
+  outline-color: 1px whitesmoke;
+  outline-style: solid;
+  
+  
   background-color: #110900;
   color: white;
   margin: 0 3vh 3vh 2vh;
@@ -21,10 +24,13 @@
 .container {
   display: row;
   position: relative;
-  padding-left: 3vh;
+  padding-left: 2vh;
+  /*padding-bottom: 3vh;*/
+
   margin: 2vh 2vh;
+  margin-bottom: 3vh;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -39,13 +45,14 @@
   width: 0;
 }
 
+
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 14px;
+  width: 14px;
 
   outline-color: whitesmoke;
   outline-style: solid;
@@ -105,7 +112,7 @@
 .search-table td {
   padding: 12px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
 }
 
 .search-table td:first-child {

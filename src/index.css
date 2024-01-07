@@ -28,20 +28,3 @@ code {
   }
 }
 
-.normal_text{
-  font-family: 'Alte Haas Grotesk';
-  font-size: 15px;
-}
-
-.title_text{
-  font-family: 'Crimson Text';
-  font-weight: bold;
-  font-size: 96px;
-  font-style: italic;
-}
-
-.tag_text{
-  font-family: 'Crimson Text';
-  font-size: 32px;
-  text-transform: uppercase;
-}
