@@ -40,11 +40,18 @@
   gap: 20px;
   margin: 0vh 3vh 0vh 3vh;
 }
+
+
 .work-in-grid {
   width: 100%;
   height: auto;
   display: block;
 }
+
+.work-in-grid:hover {
+  opacity: 20%;
+}
+
 
 p{
   font-family: 'Alte Haas Grotesk';

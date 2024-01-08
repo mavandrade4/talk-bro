@@ -11,10 +11,9 @@ const NavBar = () => {
           </Link>
           <Link to="/talk-bro/">TRABALHOS</Link>
           <Link to="/talk-bro/team">SOBRE NÓS</Link>
+          <Link to="/talk-bro/search">PESQUISA</Link>
           <a href="#footer">CONTACTOS</a>
-          <Link to="/talk-bro/search">
-            <img src="/img/search.png" class="navbar-search"/>
-          </Link>
+          
         </div>
       </nav>
     );
