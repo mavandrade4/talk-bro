@@ -29,14 +29,14 @@
 .intro{
   font-family: 'Clash Display';
   width: 30%;
-  height: 100vh;
+  
   margin: 30vh 10vh 30vh 90vh;
 }
 
 /*------------------- GRID */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Display two columns */
+  grid-template-columns: repeat(2, 1fr); /* Display two columns */
   gap: 20px;
   margin: 0vh 3vh 0vh 3vh;
 }

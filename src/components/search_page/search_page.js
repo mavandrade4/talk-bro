@@ -29,16 +29,6 @@ function SearchPage() {
         };
         fetchData();
 
-         // Initialize Locomotive Scroll
-        const scroll = new LocomotiveScroll({
-              el: document.querySelector('[data-scroll-container]'),
-                smooth: true,
-            });
-              
-        // Cleanup on component unmount
-        return () => {
-            scroll.destroy();
-            };
     }, []);
 
     const handleFilterChange = (value) => {

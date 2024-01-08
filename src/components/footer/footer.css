@@ -131,7 +131,7 @@
 .call-to-action p span::before {
     font-family: 'Crimson text';
     font-style: italic;
-    font-weight: bold;
+    font-weight: regular;
     color: #ff9900;
     font-size: 65px;
     content: "DESIGN";

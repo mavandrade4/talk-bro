@@ -99,6 +99,9 @@
 
 .search-table {
   width: 90%;
+
+  height: auto;
+
   border-collapse: collapse;
   margin: 4vh;
   font-size: 22px;
@@ -106,12 +109,13 @@
   font-weight: regular;
   text-transform: uppercase;
   font-size: 12pt;
+  text-align: left;
 }
 
 .search-table th,
 .search-table td {
   padding: 12px;
-  text-align: center;
+  text-align: left;
   border-bottom: 2px solid #ddd;
 }
 
