@@ -7,7 +7,7 @@ const NavBar = () => {
       <nav className="navbar">
         <div className="navbar-links">
           <Link to="/talk-bro/">
-            <img src="public/img/logo.svg" class="navbar-img"/>
+            <img src="/img/logo.svg" class="navbar-img"/>
           </Link>
           <Link to="/talk-bro/">TRABALHOS</Link>
           <Link to="/talk-bro/team">SOBRE NÓS</Link>
