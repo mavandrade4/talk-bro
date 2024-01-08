@@ -15,8 +15,7 @@
     width: 0.2rem;
 }
 
-.carousel-work::-webkit-scrollbar, carousel-team::-webkit-scrollbar-thumb {
-    background-color: transparent;
+.carousel-work::-webkit-scrollbar-thumb, .carousel-team::-webkit-scrollbar-thumb{
     display: none;
 }
 

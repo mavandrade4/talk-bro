@@ -29,8 +29,7 @@ function App() {
   return (
     <div>
       <div class="hero-container">
-        <img src="img/hero.gif" class='videoH' />
-            
+        <img src="img/hero.gif" class='videoH'/>
         {/*<img class="overlay-logo" src="img/logo_y.svg"/>*/}
       </div>
       <div class="intro">
