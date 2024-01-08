@@ -55,7 +55,7 @@ function TeamPage() {
 
     //////////////////////////////////////////////// PAGINA EQUIPA
     return (
-        <div>
+        <div data-scroll-container>
             <div class="info-container">
                 <p class="page-title">QUERES FAZER PARTE DA NOSSA EQUIPA?</p>
                 <p class="page-desc">A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nivel nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.</p>

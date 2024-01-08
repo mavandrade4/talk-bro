@@ -76,7 +76,7 @@ function SearchPage() {
 //////////////////////////////////////////////// PAGINA SEARCH
 
     return (
-        <div>
+        <div data-scroll-container>
             <div className="search-container">
                 <div>
                     <label>SEARCH</label>

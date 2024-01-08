@@ -7,6 +7,7 @@ function WorkPage() {
     const { state } = useLocation();
     const [works, setWork] = useState(null);
 
+
     useEffect(() => {
         // WORKS
         const fetchWorks = async () => {
@@ -25,13 +26,13 @@ function WorkPage() {
         }
         };
         fetchWorks();
-    }, []);
+    },  []);
 
     const filteredWorks = works && works.filter(item => item.id !== state.id);
 
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
-        <div>
+        <div data-scroll-container>
             <div className="work-container">
                 <div className="text">
                     <p className="title">{state.metadata.title}</p>

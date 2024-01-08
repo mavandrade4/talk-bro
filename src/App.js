@@ -27,7 +27,7 @@ function App() {
 //////////////////////////////////////////////// PAGINA TRABALHOS (HOME)
 
   return (
-    <div>
+    <div data-scroll-container>
       <div class="hero-container">
         <img src="img/hero.gif" class='videoH'/>
         {/*<img class="overlay-logo" src="img/logo_y.svg"/>*/}
