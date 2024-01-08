@@ -22,6 +22,8 @@
     letter-spacing: 4.8px;
     text-transform: uppercase;
     margin:0;
+    animation: fadeIn;
+    animation-duration: 1.5s;
 }
 
 .client{
@@ -32,6 +34,8 @@
     line-height:  100%;
     text-transform: uppercase;
     margin: 0;
+    animation: fadeIn;
+    animation-duration: 1.8s;
 }
 
 .year{
@@ -39,6 +43,8 @@
    margin-bottom: 10px;
    margin-top: 0;
    font-size: 24px;
+   animation: fadeIn;
+   animation-duration: 2s;
 }
 
 /*-----------------------------images*/
@@ -54,11 +60,15 @@
     margin-bottom: 20px;
     width: 50%;
     padding-left: 20%;
+    animation: fadeIn;
+    animation-duration: 1.2s;
 }
 
 .work-detail, .extra-img {
     width: 100%;
     margin-bottom: 20px; 
+    animation: fadeIn;
+    animation-duration: 1.8s;
   }
 
 /*---------------------------descrição das img*/
@@ -66,9 +76,11 @@
     flex-direction: column;
     /*margin-left: 200px;*/
     width:25%;
-    padding-left: 10%;
+    padding-left: 20px;
     margin-bottom: 100px;
     margin-right: 5%;
+    animation: fadeIn;
+    animation-duration: 2.5s;
 }
 
 .description {
@@ -80,13 +92,17 @@
 .author {
     font-family: 'Clash display';
     text-transform: uppercase;
-    font-size: 16px ;
+    font-size: 16px ;    
+    animation: fadeIn;
+    animation-duration: 4.5s;
 }
 
 .tags {
     font-family: 'Crimson Text';
     font-size: 24px;
     text-transform: uppercase;
+    animation: fadeIn;
+    animation-duration: 3.5s;
 }
 
 /*--------------------CAROUSEL WORK */
