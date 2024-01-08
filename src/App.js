@@ -27,16 +27,13 @@ function App() {
     };
     fetchWorks();
 
-        // Initialize Locomotive Scroll
-        const scroll = new LocomotiveScroll({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true,
-        });
-    
-        // Cleanup on component unmount
-        return () => {
-          scroll.destroy();
-        };
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+    });
+    return () => {
+      scroll.destroy();
+    };
   }, []);
 
 //////////////////////////////////////////////// PAGINA TRABALHOS (HOME)
@@ -44,7 +41,7 @@ function App() {
   return (
     <div data-scroll-container>
       <div class="hero-container">
-        <img src="img/hero.gif" class='videoH'/>
+        <img src="public/img/hero.gif" class='videoH'/>
         {/*<img class="overlay-logo" src="img/logo_y.svg"/>*/}
       </div>
       <div class="intro">

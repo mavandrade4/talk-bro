@@ -27,10 +27,6 @@ function WorkPage() {
         }
         };
         fetchWorks();
-
-
-
-
     },  []);
 
     const filteredWorks = works && works.filter(item => item.id !== state.id);
