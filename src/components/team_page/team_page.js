@@ -2,7 +2,6 @@ import { createBucketClient } from "@cosmicjs/sdk";
 import { useEffect, useState } from "react";
 import "./team_page.css";
 import { Link } from "react-router-dom";
-import LocomotiveScroll from 'locomotive-scroll';
 import 'animate.css';
 
 
@@ -48,16 +47,6 @@ function TeamPage() {
         fetchWorks();
         fetchTeam();
 
-        // Initialize Locomotive Scroll
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-        });
-              
-        // Cleanup on component unmount
-        return () => {
-            scroll.destroy();
-        };
     }, []);
 
     function handleTeamMemberClick(member) {

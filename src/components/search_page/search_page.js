@@ -3,7 +3,6 @@ import { createBucketClient } from "@cosmicjs/sdk";
 import { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./search_page.css";
-import LocomotiveScroll from 'locomotive-scroll';
 
 
 function SearchPage() {
