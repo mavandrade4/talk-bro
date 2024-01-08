@@ -59,7 +59,7 @@ function App() {
                 <Link to='/talk-bro/work' state={item}>
                   <div class="work-in-grid-container">
                     <img class="work-in-grid" src={item.metadata.img.url} />
-                    <div className="overlay-text">👀</div>
+                    <div className="overlay-text">{item.metadata.title}</div>
                   </div>
                 </Link>
               </div>
