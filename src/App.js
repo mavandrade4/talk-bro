@@ -45,10 +45,10 @@ function App() {
       </div>
       <div class="intro">
         <p>
-          A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nivel nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.
+          A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nível nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.
         </p>
       </div>
-      <div className="image-grid">
+      <div className="image-grid" id="image-grid">
           {data ? (
             data.map((item) => (
               <div className="image-item" key={item._id}>

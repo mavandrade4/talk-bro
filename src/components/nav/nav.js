@@ -9,7 +9,7 @@ const NavBar = () => {
           <Link to="/talk-bro/">
             <img src="img/logo.svg" class="navbar-img"/>
           </Link>
-          <Link to="/talk-bro/">TRABALHOS</Link>
+          <Link to="/talk-bro/#image-grid">TRABALHOS</Link>
           <Link to="/talk-bro/team">SOBRE NÓS</Link>
           <Link to="/talk-bro/search">PESQUISA</Link>
           <a href="#footer">CONTACTOS</a>
