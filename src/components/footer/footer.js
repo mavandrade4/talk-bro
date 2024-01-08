@@ -24,7 +24,7 @@ function Footer() {
                     <Link to="https://www.whatsapp.com/">{/*LINK PARA WPP*
                         <img src="img/whatsapp.png" />
                     </Link>
-                    <Link to="https://www.youtube.com/">{/*LINK PARA YOUTUBE
+                    <Link to="https://www.youtube.com/">{/*LINK PARA YOUTUBE*
                         <img src="img/youtube.png" />
                     </Link>*/}
                 </div>
