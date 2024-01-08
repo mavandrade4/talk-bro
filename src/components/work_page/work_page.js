@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import './work_page.css';
 import { createBucketClient } from "@cosmicjs/sdk";
+import LocomotiveScroll from 'locomotive-scroll';
+
 
 function WorkPage() {
     const { state } = useLocation();
@@ -26,6 +28,18 @@ function WorkPage() {
         }
         };
         fetchWorks();
+
+         // Initialize Locomotive Scroll
+         const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+         });
+              
+         // Cleanup on component unmount
+         return () => {
+          scroll.destroy();
+         };
+
     },  []);
 
     const filteredWorks = works && works.filter(item => item.id !== state.id);

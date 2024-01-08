@@ -3,6 +3,8 @@ import { createBucketClient } from "@cosmicjs/sdk";
 import { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./search_page.css";
+import LocomotiveScroll from 'locomotive-scroll';
+
 
 function SearchPage() {
     const [data, setData] = useState(null);
@@ -26,6 +28,17 @@ function SearchPage() {
             }
         };
         fetchData();
+
+         // Initialize Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+              el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+            });
+              
+        // Cleanup on component unmount
+        return () => {
+            scroll.destroy();
+            };
     }, []);
 
     const handleFilterChange = (value) => {

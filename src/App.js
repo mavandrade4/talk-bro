@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { createBucketClient } from '@cosmicjs/sdk';
 import './App.css'
 import { Link } from 'react-router-dom';
+import LocomotiveScroll from 'locomotive-scroll';
+
+
+
 
 function App() {
   const [data, setData] = useState(null);
@@ -22,6 +26,17 @@ function App() {
       }
     };
     fetchWorks();
+
+        // Initialize Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true,
+        });
+    
+        // Cleanup on component unmount
+        return () => {
+          scroll.destroy();
+        };
   }, []);
 
 //////////////////////////////////////////////// PAGINA TRABALHOS (HOME)
