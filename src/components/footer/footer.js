@@ -15,7 +15,7 @@ function Footer() {
 
             <div className="footer-links">
                 <div class="social">
-                    <Link to="https://www.instagram.com/talkbro.agency/"> {/*LINK PARA INSTA*/}
+                    <Link to="https://www.instagram.com/talkbro.agency/">
                         <img src="img/insta_icon.svg" />
                     </Link>
                     {/*<Link to="https://www.tiktok.com/en/">{/*LINK PARA TIK TOK*
@@ -28,7 +28,6 @@ function Footer() {
                         <img src="img/youtube.png" />
                     </Link>*/}
                 </div>
-
                 <div class="logo">
                     <img src="img/logo_y.svg" />
                     <p>2023, TALKBROAGENCY.</p>
