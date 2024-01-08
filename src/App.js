@@ -57,7 +57,10 @@ function App() {
             data.map((item) => (
               <div className="image-item" key={item._id}>
                 <Link to='/talk-bro/work' state={item}>
-                  <img class="work-in-grid" src={item.metadata.img.url} />
+                  <div class="work-in-grid-container">
+                    <img class="work-in-grid" src={item.metadata.img.url} />
+                    <div className="overlay-text">👀</div>
+                  </div>
                 </Link>
               </div>
             ))
