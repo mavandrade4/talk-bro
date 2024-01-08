@@ -13,7 +13,6 @@ const NavBar = () => {
           <Link to="/talk-bro/team">SOBRE NÓS</Link>
           <Link to="/talk-bro/search">PESQUISA</Link>
           <a href="#footer">CONTACTOS</a>
-          
         </div>
       </nav>
     );

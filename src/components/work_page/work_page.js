@@ -3,11 +3,10 @@ import { useEffect, useState } from "react";
 import './work_page.css';
 import { createBucketClient } from "@cosmicjs/sdk";
 
-
 function WorkPage() {
     const { state } = useLocation();
-    const [works, setWork] = useState(null);
-
+    const [filteredWorks, setWorks] = useState(null);
+    const [work] = useState(state);
 
     useEffect(() => {
         // WORKS
@@ -21,37 +20,33 @@ function WorkPage() {
             type: 'works',
             });
             console.log(response);
-            setWork(response.objects);
+            setWorks(response.objects.filter(item => item.id !== state.id));
         } catch (error) {
             console.error('Error fetching data:', error);
         }
         };
         fetchWorks();
     },  []);
-
-    const filteredWorks = works && works.filter(item => item.id !== state.id);
-
-   
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
         <div data-scroll-container>
             <div className="work-container">
                 <div className="text">
-                    <p className="title">{state.metadata.title}</p>
-                    <p className="client">{state.metadata.client}</p>
-                    <p className="year">{state.metadata.year}</p>
+                    <p className="title">{work.metadata.title}</p>
+                    <p className="client">{work.metadata.client}</p>
+                    <p className="year">{work.metadata.year}</p>
                 </div>
                 <div className="imagedescript">
                     <div className="image">
-                    <img className="work-detail" src={state.metadata.img.url}/>
-                        {state.metadata.extra_imgs.map((item) => (
+                    <img className="work-detail" src={work.metadata.img.url}/>
+                        {work.metadata.extra_imgs.map((item) => (
                         <img src={item.extra_img.url} class="extra-img"/>
                         ))}
                     </div>
                     <div className="descript">
-                    <p className="description"> {state.metadata.description}</p>
-                    <p className="tags">{state.metadata.tags.join(' * ')}</p>
-                    <p className="author">{state.metadata.author} </p>
+                    <p className="description"> {work.metadata.description}</p>
+                    <p className="tags">{work.metadata.tags.join(' * ')}</p>
+                    <p className="author">{work.metadata.author} </p>
                     </div>
                 </div>
             </div>
@@ -59,7 +54,7 @@ function WorkPage() {
                 {filteredWorks && (
                     filteredWorks.map((item) => (
                         <div className="work-item" key={item.id}>
-                            <Link to='/talk-bro/work' state={item}>
+                            <Link to='/talk-bro/work' work={item}>
                                 {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
                                 <div className="overlay-text-work">{item.metadata.title}</div>
                             </Link>
@@ -70,6 +65,5 @@ function WorkPage() {
         </div>
     );
 }
-
 
 export default WorkPage; 
