@@ -19,7 +19,6 @@ function App() {
         const response = await cosmic.objects.find({
           type: 'works',
         });
-        console.log(response);
         setData(response.objects);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -41,7 +40,7 @@ function App() {
   return (
     <div data-scroll-container>
       <div class="hero-container">
-        <img src="public/img/hero.gif" class='videoH'/>
+        <img src="/img/hero.gif" class='videoH'/>
         {/*<img class="overlay-logo" src="img/logo_y.svg"/>*/}
       </div>
       <div class="intro">
