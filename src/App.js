@@ -2,15 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { createBucketClient } from '@cosmicjs/sdk';
 import './App.css'
 import { Link } from 'react-router-dom';
-import LocomotiveScroll from 'locomotive-scroll';
-
-
-
+//import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
   const [data, setData] = useState(null);
   useEffect(() => {
     const fetchWorks = async () => {
+      window.scrollTo(0, 0);
       const cosmic = createBucketClient({
         bucketSlug: 'talk-bro-production',
         readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
@@ -25,7 +23,7 @@ function App() {
       }
     };
     fetchWorks();
-
+    /*
     const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
@@ -33,6 +31,7 @@ function App() {
     return () => {
       scroll.destroy();
     };
+    */
   }, []);
 
 //////////////////////////////////////////////// PAGINA TRABALHOS (HOME)

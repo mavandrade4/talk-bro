@@ -57,7 +57,8 @@
     height: 30vh;
     width: 30vh;
     margin: 0 0 0 0;
-    transition: transform 5s ease-in-out opacity 5s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    /*transition: opacity 1s ease-in-out;*/
 }
 
 
@@ -74,8 +75,7 @@
 .team-item.selected {
     transform: scale(1.4);
     /*animation: bounce;
-    animation-duration: 0.03s;
-    */
+    animation-duration: 0.1s;*/
 }
 
 .team-img {

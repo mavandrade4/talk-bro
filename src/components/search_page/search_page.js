@@ -6,6 +6,7 @@ import "./search_page.css";
 
 
 function SearchPage() {
+    window.scrollTo(0, 0);
     const [data, setData] = useState(null);
     const [filter, setFilter] = useState('');
     const [selectedTags, setSelectedTags] = useState([]);

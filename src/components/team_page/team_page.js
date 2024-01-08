@@ -4,14 +4,13 @@ import "./team_page.css";
 import { Link } from "react-router-dom";
 import 'animate.css';
 
-
-
 function TeamPage() {
     const [works, setWork] = useState(null);
     const [team, setTeam] = useState(null);
     const [selectedMember, setMember] = useState(null);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         // WORKS
         const fetchWorks = async () => {
         const cosmic = createBucketClient({

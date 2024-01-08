@@ -9,6 +9,7 @@ function WorkPage() {
     const [work] = useState(state);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         // WORKS
         const fetchWorks = async () => {
         const cosmic = createBucketClient({
