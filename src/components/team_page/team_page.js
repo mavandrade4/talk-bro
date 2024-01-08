@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import "./team_page.css";
 import { Link } from "react-router-dom";
 import LocomotiveScroll from 'locomotive-scroll';
+import 'animate.css';
+
 
 
 function TeamPage() {

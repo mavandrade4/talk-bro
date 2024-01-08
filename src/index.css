@@ -28,6 +28,7 @@ code {
 }
 
 
+
 @media only screen and (max-width: 767px) {
   .root {
     width: 100vh;
