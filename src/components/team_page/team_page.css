@@ -56,17 +56,20 @@
     transition: transform 0.3s ease-in-out opacity 0.3s ease-in-out;
 }
 
-.team-item:hover {
-    transform: scale(1.4);
-}
-
 .team-item.selected {
+    
     transform: scale(1.4);
 }
 
 .team-item:not(.selected) {
     opacity: 0.3;
 }
+
+.team-item:hover {
+    transform: scale(1.4);
+    opacity: 1;
+}
+
 
 .team-img {
     height: 100%;

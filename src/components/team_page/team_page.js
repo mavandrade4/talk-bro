@@ -100,6 +100,9 @@ function TeamPage() {
                     </div>
                 </div>
             ) }
+            <div class="info-container">
+                <p class="page-title">OS NOSSOS TRABALHOS</p>
+            </div>
             <div className="carousel-work">
             {works && (
                     works.map((item) => ( 

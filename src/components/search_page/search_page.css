@@ -123,6 +123,15 @@
  font-weight: bold;
 }
 
+.first-column{
+  transition: background-color 0.15s ease-out 100ms
+}
+
+.first-column:hover {
+  background-color: #F7931E;
+ }
+ 
+
 .work-link {
   display: block;
   padding: 12px;
@@ -131,7 +140,13 @@
   color: white;
 }
 
+.header th{
+  transition: color 0.5s ease-out 100ms;
+  transition: background-color 0.25s ease-out 100ms
+}
+
 .header th:hover {
   background-color: white;
   color: #110900;
+  cursor: pointer;
 }

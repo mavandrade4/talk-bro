@@ -46,6 +46,7 @@
   width: 100%;
   height: auto;
   display: block;
+  transition: opacity 0.25s ease-out 100ms;
 }
 
 .work-in-grid:hover {
