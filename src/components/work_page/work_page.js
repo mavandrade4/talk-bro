@@ -30,6 +30,7 @@ function WorkPage() {
 
     const filteredWorks = works && works.filter(item => item.id !== state.id);
 
+   
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
         <div data-scroll-container>
@@ -67,5 +68,6 @@ function WorkPage() {
         </div>
     );
 }
+
 
 export default WorkPage; 

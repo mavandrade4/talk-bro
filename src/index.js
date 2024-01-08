@@ -12,8 +12,9 @@ import SearchPage from './components/search_page/search_page';
 import Root from './components/root';
 import './index.css';
 
-import LocomotiveScroll from 'locomotive-scroll';
+import anime from 'animejs';
 
+import LocomotiveScroll from 'locomotive-scroll';
 
 
 
