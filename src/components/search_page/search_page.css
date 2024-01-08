@@ -10,14 +10,16 @@
 }
 
 .search-input {
-  width: 30%;
-  outline-color: 1px whitesmoke;
-  outline-style: solid;
-  
-  
+  width: 80%;
+  /*outline: 1px whitesmoke;*/
+  outline: none;
+  /*outline-style: solid;*/
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+  padding: 5px;
   background-color: #110900;
   color: white;
-  margin: 0 3vh 3vh 2vh;
+  margin: 0 3vh 6vh 2vh;
 }
 
 /*----------------------  TAGS */
@@ -26,7 +28,6 @@
   position: relative;
   padding-left: 2vh;
   /*padding-bottom: 3vh;*/
-
   margin: 2vh 2vh;
   margin-bottom: 3vh;
   cursor: pointer;
@@ -35,6 +36,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 2;
 }
 
 /* Hide the browser's default checkbox */
@@ -53,13 +55,10 @@
   left: 0;
   height: 14px;
   width: 14px;
-
   outline-color: whitesmoke;
   outline-style: solid;
-
   margin-bottom: 6px;
   margin-right: 6px;
-
 }
 
 /* On mouse-over, add a grey background color */
@@ -99,9 +98,7 @@
 
 .search-table {
   width: 90%;
-
   height: auto;
-
   border-collapse: collapse;
   margin: 4vh;
   font-size: 22px;
@@ -135,7 +132,7 @@
 .work-link {
   display: block;
   padding: 12px;
-  text-align: center;
+  /*text-align: center;*/
   text-decoration: none;
   color: white;
 }
@@ -149,4 +146,29 @@
   background-color: white;
   color: #110900;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .search-container {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .container {
+    font-size: 12px;
+    line-height: 2;
+
+  }
+
+  .search-table {
+    font-size: 10px;
+    width: 80%;
+    
+  }
+  .search-input {
+    width: 60%;
+    margin: 0 2vh 4vh 2vh;
+  }
+
 }
