@@ -178,6 +178,10 @@
         font-size: 3vw;
         max-width: 100%;
     }
+
+    .email{
+        padding-bottom: 50px;
+    }
     
     .footer-links{
         flex-direction: column;
