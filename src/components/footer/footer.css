@@ -2,11 +2,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    background-color:#110900;
-    /*background-color: #110900;*/
-    bottom: 0;
+    background-color: #110900;
 }
 /*
 .footer-links{
@@ -56,6 +53,10 @@
     margin: 0 auto;
 }
 
+.logo p{
+    font-size: 10px;
+}
+
 /*--------------------------------- NAVBAR*/
 .pages {
     display: flex;
@@ -70,6 +71,7 @@
     color: #FFF9F1;
     padding: 0 40px;
     margin-bottom: 30px;
+    font-size: small;
 }
 
 .pages a:hover {
@@ -80,7 +82,6 @@
 .email {
     overflow: hidden;
     white-space: nowrap;
-    display: inline-block; 
     max-width: 100%; 
     padding-top: 50px;
     padding-bottom: 100px;
@@ -135,8 +136,8 @@
     font-size: 65px;
     content: "DESIGN";
     animation: animate infinite 6s;
-    padding-left: 10px;
-    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 @keyframes animate {
@@ -151,5 +152,41 @@
     }
     75% {
         content: "CREATE";
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .footer, .footer-links {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .call-to-action p{
+        font-size: 15px;
+        padding-top: 30px;
+    }
+
+    .call-to-action p span::before {
+        font-size: 17px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .email p {
+        font-size: 10px;
+    }
+    
+    .footer-links{
+        flex-direction: column;
+    }
+
+    .social {
+        margin-bottom: 30px;
+    }
+
+    .pages {
+        display: none;
     }
 }

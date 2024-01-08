@@ -5,11 +5,11 @@ function Footer() {
     return (
         <div className="footer" id="footer">
             <div class="call-to-action">
-                <p>LET'S  <span></span>  TOGETHER!</p>
+                <p>LET'S<span></span>TOGETHER!</p>
             </div>
             <div class="email">
                 <a href="mailto:TALKBROAGENCY@GMAIL.COM" target="_blank" rel="noopener noreferrer">
-                    <p class="stroke">TALKBROAGENCY@GMAIL.COM</p>  <p> * TALKBROAGENCY@GMAIL.COM</p> <p class="stroke"> * TALKBROAGENCY@GMAIL.COM</p> <p>* TALKBROAGENCY@GMAIL.COM</p>
+                    <p class="stroke">* TALKBROAGENCY@GMAIL.COM</p><p> * TALKBROAGENCY@GMAIL.COM</p><p class="stroke"> * TALKBROAGENCY@GMAIL.COM</p><p> * TALKBROAGENCY@GMAIL.COM</p>
                 </a>
             </div>
 
