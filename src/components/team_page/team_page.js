@@ -109,6 +109,7 @@ function TeamPage() {
                     <div className="work-item">
                         <Link to='/talk-bro/work' state={item}>
                             {<img class="work-img" src={item.metadata.img.url} />}
+                            <div className="overlay-text-work">👀</div>
                         </Link>
                     </div>
                     ))

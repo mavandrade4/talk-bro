@@ -74,6 +74,7 @@ function WorkPage() {
                         <div className="work-item" key={item.id}>
                             <Link to='/talk-bro/work' state={item}>
                                 {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
+                                <div className="overlay-text-work">👀</div>
                             </Link>
                         </div>
                     ))
