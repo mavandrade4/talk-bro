@@ -73,7 +73,7 @@ function TeamPage() {
         <div data-scroll-container>
             <div class="info-container">
                 <p class="page-title">QUERES FAZER PARTE DA NOSSA EQUIPA?</p>
-                <p class="page-desc">A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nivel nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.</p>
+                <p class="page-desc">A nossa equipa é constituída por profissionais da área do design e da comunicação que já colaboraram com várias instituições culturais, como o Linha de Fuga, a Associação Cultural Apura, o coletivo mediático Mundus, o Caminhos do Cinema Português, o Grémio Operário de Coimbra, a Casa das Artes Bissaya Barreto, o Festival Les Siestes Électroniques, Rádio Universidade de Coimbra, Blue House, Revista Gerador, Rimas e Batidas, Teatro Viriato e muito mais. E isto faz-nos acreditar que somos as pessoas certas para ti e o teu projeto.</p>
             </div>
             <div class="carousel-team">
             {team && (
@@ -95,7 +95,7 @@ function TeamPage() {
             </div>
                 { selectedMember && (
                 <div class="member-detail">
-                    <div>
+                    <div class="bio-members">
                         <p class="detail-name">{selectedMember.metadata.name}</p>
                         <p class="detail-tag">{selectedMember.metadata.tags.join(" * ")}</p>
                         <p class="detail-bio">{selectedMember.metadata.bio}</p>
@@ -111,7 +111,7 @@ function TeamPage() {
                     <div className="work-item">
                         <Link to='/talk-bro/work' state={item}>
                             {<img class="work-img" src={item.metadata.img.url} />}
-                            <div className="overlay-text-work">👀</div>
+                            <div className="overlay-text-work">{item.metadata.title}</div>
                         </Link>
                     </div>
                     ))

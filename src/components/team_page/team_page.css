@@ -40,9 +40,8 @@
 .page-desc {
     font-family: 'Alte Haas Grotesk';
     font-size: 24px;
-    width: 50vh;
+    width: 80vh;
     height: auto;
-    max-height: 40vh;
     padding: 0 0 0 30%;
 }
 
@@ -56,10 +55,7 @@
     transition: transform 0.3s ease-in-out opacity 0.3s ease-in-out;
 }
 
-.team-item.selected {
-    
-    transform: scale(1.4);
-}
+
 
 .team-item:not(.selected) {
     opacity: 0.3;
@@ -70,16 +66,11 @@
     opacity: 1;
 }
 
-.member-detail {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .member-detail.selected {
-    opacity: 1;
-  }
-  
-
+.team-item.selected {
+    transform: scale(1.4);
+    animation: bounce;
+    animation-duration: 0.03s;
+}
 
 .team-img {
     height: 100%;
@@ -96,10 +87,13 @@
 .member-detail{
     display: flex;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 4vh;
     justify-content: left;
     margin: 3% 3% 3% 3%;
+    margin-left: 50vh;
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s; /* don't forget to set a duration! */
 }
 
 /* nome membro */
@@ -159,7 +153,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 50pt;
+    font-size: 20pt;
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
