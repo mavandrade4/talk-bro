@@ -52,16 +52,16 @@ function WorkPage() {
                 </div>
             </div>
             <div className="carousel-work">
-                {filteredWorks && (
-                    filteredWorks.map((item) => (
-                        <div className="work-item" key={item.id}>
-                            <Link to='/talk-bro/work' work={item}>
-                                {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
-                                <div className="overlay-text-work">{item.metadata.title}</div>
-                            </Link>
-                        </div>
-                    ))
-                )}
+            {filteredWorks && (
+                filteredWorks.map((item) => (
+                    <div className="work-item" key={item.id}>
+                        <Link to='/talk-bro/work' state={item}>
+                            {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
+                            <div className="overlay-text-work">{item.metadata.title}</div>
+                        </Link>
+                    </div>
+                ))
+            )}
             </div>
         </div>
     );
