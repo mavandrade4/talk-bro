@@ -6,10 +6,11 @@ import { createBucketClient } from "@cosmicjs/sdk";
 function WorkPage() {
     const { state } = useLocation();
     const [filteredWorks, setWorks] = useState(null);
-    const [work] = useState(state);
+    const [work, setWork] = useState(state);
+
+    window.scrollTo(0, 0);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
         // WORKS
         const fetchWorks = async () => {
         const cosmic = createBucketClient({
@@ -20,7 +21,6 @@ function WorkPage() {
             const response = await cosmic.objects.find({
             type: 'works',
             });
-            console.log(response);
             setWorks(response.objects.filter(item => item.id !== state.id));
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -28,6 +28,11 @@ function WorkPage() {
         };
         fetchWorks();
     },  []);
+    
+    const handleClick = (item) => {
+        setWork(item);
+    }
+
     //////////////////////////////////////////////// PAGINA DETALHE TRABALHO
     return (
         <div data-scroll-container>
@@ -54,11 +59,9 @@ function WorkPage() {
             <div className="carousel-work">
             {filteredWorks && (
                 filteredWorks.map((item) => (
-                    <div className="work-item" key={item.id}>
-                        <Link to='/talk-bro/work' state={item}>
-                            {<img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />}
-                            <div className="overlay-text-work">{item.metadata.title}</div>
-                        </Link>
+                    <div className="work-item" key={item.id} onClick={()=>handleClick(item)}>
+                        <img className="work-img" src={item.metadata.img.url} alt={item.metadata.title} />
+                        <div className="overlay-text-work">{item.metadata.title}</div>
                     </div>
                 ))
             )}

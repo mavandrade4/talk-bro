@@ -153,14 +153,17 @@
     .imagedescript{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         margin-left: 5%;
+        margin-right: 5%;
+        box-sizing: border-box;
     }
 
     .image {
         margin-bottom: 20px;
         padding-left: 0;
         width: 100%;
+        box-sizing: border-box;
     }
     
     .descript{
