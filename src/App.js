@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 function App() {
   const [data, setData] = useState(null);
+  const [intros, setIntrosData] = useState(null);
+
   useEffect(() => {
     const fetchWorks = async () => {
       window.scrollTo(0, 0);
@@ -22,7 +24,6 @@ function App() {
         console.error('Error fetching data:', error);
       }
     };
-    fetchWorks();
     /*
     const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
@@ -32,6 +33,28 @@ function App() {
       scroll.destroy();
     };
     */
+  
+    const fetchIntros = async () => {
+      window.scrollTo(0, 0);
+      const cosmic = createBucketClient({
+        bucketSlug: 'talk-bro-production',
+        readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
+      });
+      try {
+        const response = await cosmic.objects.find({
+          type: 'intros',
+        });
+        setIntrosData(response.objects);
+      } catch (error) {
+        console.error('Error fetching intros data:', error);
+      }
+    };
+
+
+  fetchWorks();
+  fetchIntros();
+
+
   }, []);
 
 //////////////////////////////////////////////// PAGINA TRABALHOS (HOME)
@@ -44,8 +67,11 @@ function App() {
       </div>
       <div class="intro">
         <p>
-          A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nível nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.
-        </p>
+        {intros &&
+          intros
+           .filter((intro) => intro.title === 'Descrição Home Page')
+           .map((intro) => intro.metafields && intro.metafields.textos)}
+          </p>
       </div>
       <div className="image-grid" id="image-grid">
           {data ? (
