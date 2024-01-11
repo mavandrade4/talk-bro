@@ -8,6 +8,8 @@ function TeamPage() {
     const [works, setWork] = useState(null);
     const [team, setTeam] = useState(null);
     const [selectedMember, setMember] = useState(null);
+    const [intros, setIntrosData] = useState(null);
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -43,6 +45,23 @@ function TeamPage() {
                 console.error('Error fetching data:', error);
             }
             };
+
+            const fetchIntros = async () => {
+                window.scrollTo(0, 0);
+                const cosmic = createBucketClient({
+                  bucketSlug: 'talk-bro-production',
+                  readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
+                });
+                try {
+                  const response = await cosmic.objects.find({
+                    type: 'intros',
+                  });
+                  setIntrosData(response.objects);
+                } catch (error) {
+                  console.error('Error fetching intros data:', error);
+                }
+              };
+        fetchIntros();
         fetchWorks();
         fetchTeam();
     }, []);
@@ -59,8 +78,15 @@ function TeamPage() {
     return (
         <div data-scroll-container>
             <div class="info-container">
-                <p class="page-title">QUERES FAZER PARTE DA NOSSA EQUIPA?</p>
-                <p class="page-desc">A nossa equipa é constituída por profissionais da área do design e da comunicação que já colaboraram com várias instituições culturais, como o Linha de Fuga, a Associação Cultural Apura, o coletivo mediático Mundus, o Caminhos do Cinema Português, o Grémio Operário de Coimbra, a Casa das Artes Bissaya Barreto, o Festival Les Siestes Électroniques, Rádio Universidade de Coimbra, Blue House, Revista Gerador, Rimas e Batidas, Teatro Viriato e muito mais. E isto faz-nos acreditar que somos as pessoas certas para ti e o teu projeto.</p>
+                <p class="page-title">
+                    {intros &&
+                    intros.filter((intro) => intro.title === 'Title Team Page')
+                    .map((intro) => intro.metafields && intro.metafields.textos)}</p>
+
+                <p class="page-desc"> 
+                    {intros &&
+                    intros.filter((intro) => intro.title === 'Team Page Desc')
+                    .map((intro) => intro.metafields && intro.metafields.textos)}</p>
             </div>
             <div class="carousel-team">
             {team && (
