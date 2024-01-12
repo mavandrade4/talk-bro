@@ -106,11 +106,11 @@ function SearchPage() {
                     ))}
                 </div>
             </div>
-
+        <div className="table-container">
             <table className="search-table">
                 <thead>
                     <tr className="header">
-                        <th style={{ width: "20%" }} onClick={() => handleSort('title')}>
+                        <th style={{ width: "30%" }} onClick={() => handleSort('title')}>
                             NOME {sortConfig.key === 'title' && (
                                 sortConfig.direction === 'asc' ? '▲' : '▼'
                             )}
@@ -126,13 +126,14 @@ function SearchPage() {
                                 sortConfig.direction === 'asc' ? '▲' : '▼'
                             )}
                         </th>
-                        <th style={{ width: "30%" }} onClick={() => handleSort('year')}>
+                        <th style={{ width: "10%" }} onClick={() => handleSort('year')}>
                             ANO {sortConfig.key === 'year' && (
                                 sortConfig.direction === 'asc' ? '▲' : '▼'
                             )}
                         </th>
                     </tr>
                 </thead>
+                
                 <tbody>
                     {sortedData.map((item) => (
                         <tr key={item._id}>
@@ -149,6 +150,7 @@ function SearchPage() {
                     ))}
                 </tbody>
             </table>
+            </div>
         </div>
     );
 }

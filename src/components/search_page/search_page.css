@@ -95,12 +95,18 @@
 }
 
 /*----------------------  TABELA*/
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .search-table {
   width: 90%;
   height: auto;
   border-collapse: collapse;
-  margin: 4vh;
+ /* margin: 4vh;*/
   font-size: 22px;
   font-family: 'Clash Display' ;
   font-weight: regular;
