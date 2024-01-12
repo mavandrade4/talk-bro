@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/talk-bro/static/css/main.0bc0cdc6.css",
-    "main.js": "/talk-bro/static/js/main.ddf259fb.js",
+    "main.css": "/talk-bro/static/css/main.9fa3e108.css",
+    "main.js": "/talk-bro/static/js/main.61ee7d92.js",
     "static/js/787.e868f0f5.chunk.js": "/talk-bro/static/js/787.e868f0f5.chunk.js",
     "index.html": "/talk-bro/index.html",
-    "main.0bc0cdc6.css.map": "/talk-bro/static/css/main.0bc0cdc6.css.map",
-    "main.ddf259fb.js.map": "/talk-bro/static/js/main.ddf259fb.js.map",
+    "main.9fa3e108.css.map": "/talk-bro/static/css/main.9fa3e108.css.map",
+    "main.61ee7d92.js.map": "/talk-bro/static/js/main.61ee7d92.js.map",
     "787.e868f0f5.chunk.js.map": "/talk-bro/static/js/787.e868f0f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bc0cdc6.css",
-    "static/js/main.ddf259fb.js"
+    "static/css/main.9fa3e108.css",
+    "static/js/main.61ee7d92.js"
   ]
 }
