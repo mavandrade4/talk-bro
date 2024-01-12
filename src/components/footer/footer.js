@@ -1,7 +1,30 @@
+import { useEffect, useState } from 'react';
 import './footer.css';
 import { Link } from 'react-router-dom';
+import { createBucketClient } from '@cosmicjs/sdk';
 
 function Footer() {
+    const [content, setContent] = useState(null);
+
+    useEffect(() => {
+        const fetchContent = async () => {
+            const cosmic = createBucketClient({
+                bucketSlug: 'talk-bro-production',
+                readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
+            });
+            try {
+                const response = await cosmic.objects.find({
+                type: 'contents',
+                });
+                console.log(response);
+                setContent(response.objects);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchContent();
+    }, []);
+
     return (
         <div className="footer" id="footer">
             <div class="call-to-action">
@@ -29,7 +52,12 @@ function Footer() {
                     </Link>*/}
                 </div>
                 <div class="logo">
-                    <img src="img/logo_y.svg" />
+                {content && content.map(item => {
+                    if(item.title === 'logo_orange'){
+                        return <img src={item.metadata.img.url}/>
+                    }
+                })
+            }
                     <p>2023, TALKBROAGENCY.</p>
                 </div>
 
