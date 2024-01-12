@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function App() {
   const [data, setData] = useState(null);
-  const [intros, setIntrosData] = useState(null);
+  const [content, setContent] = useState(null);
 
   useEffect(() => {
     const fetchWorks = async () => {
@@ -24,37 +24,33 @@ function App() {
         console.error('Error fetching data:', error);
       }
     };
-    /*
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-    });
-    return () => {
-      scroll.destroy();
-    };
-    */
-  
-    const fetchIntros = async () => {
-      window.scrollTo(0, 0);
+    const fetchContent = async () => {
       const cosmic = createBucketClient({
-        bucketSlug: 'talk-bro-production',
-        readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
+          bucketSlug: 'talk-bro-production',
+          readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
       });
       try {
-        const response = await cosmic.objects.find({
-          type: 'intros',
-        });
-        setIntrosData(response.objects);
+          const response = await cosmic.objects.find({
+          type: 'contents',
+          });
+          console.log(response);
+          setContent(response.objects);
       } catch (error) {
-        console.error('Error fetching intros data:', error);
+          console.error('Error fetching data:', error);
       }
-    };
-
-
-  fetchWorks();
-  fetchIntros();
-
-
+  };
+  
+  /*
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+  });
+  return () => {
+    scroll.destroy();
+  };
+  */
+    fetchContent();
+    fetchWorks();
   }, []);
 
 //////////////////////////////////////////////// PAGINA TRABALHOS (HOME)
@@ -63,17 +59,14 @@ function App() {
     <div data-scroll-container>
       <div class="hero-container">
         <img src="img/hero.gif" class='videoH'/>
-        {/*<img class="overlay-logo" src="img/logo_y.svg"/>*/}
       </div>
       <div class="intro">
-        <p>
-        A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nível nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.
-        {//intros &&
-          //intros
-           //.filter((intro) => intro.title === 'Descrição Home Page')
-           //.map((intro) => intro.metafields && intro.metafields.textos)
+      {content && content.map(item => {
+        if(item.title === 'descHomePage'){
+            return <p>{item.metadata.text}</p> 
           }
-          </p>
+        })
+      }
       </div>
       <div className="image-grid" id="image-grid">
           {data ? (

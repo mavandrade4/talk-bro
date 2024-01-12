@@ -8,8 +8,7 @@ function TeamPage() {
     const [works, setWork] = useState(null);
     const [team, setTeam] = useState(null);
     const [selectedMember, setMember] = useState(null);
-    const [intros, setIntrosData] = useState(null);
-
+    const [content, setContent] = useState(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -23,7 +22,6 @@ function TeamPage() {
             const response = await cosmic.objects.find({
             type: 'works',
             });
-            console.log(response);
             setWork(response.objects);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -39,31 +37,29 @@ function TeamPage() {
                 const response = await cosmic.objects.find({
                 type: 'members',
                 });
-                console.log(response);
                 setTeam(response.objects);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
-            };
-
-            const fetchIntros = async () => {
-                window.scrollTo(0, 0);
-                const cosmic = createBucketClient({
-                  bucketSlug: 'talk-bro-production',
-                  readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
+        };
+        const fetchContent = async () => {
+            const cosmic = createBucketClient({
+                bucketSlug: 'talk-bro-production',
+                readKey: 'cv2tgszKnLkI3DNLtTqK2nRisfEtDatGzO81fcYJp3UBubBYLk',
+            });
+            try {
+                const response = await cosmic.objects.find({
+                type: 'contents',
                 });
-                try {
-                  const response = await cosmic.objects.find({
-                    type: 'intros',
-                  });
-                  setIntrosData(response.objects);
-                } catch (error) {
-                  console.error('Error fetching intros data:', error);
-                }
-              };
-        fetchIntros();
+                console.log(response);
+                setContent(response.objects);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
         fetchWorks();
         fetchTeam();
+        fetchContent();
     }, []);
 
     function handleTeamMemberClick(member) {
@@ -78,20 +74,18 @@ function TeamPage() {
     return (
         <div data-scroll-container>
             <div class="info-container">
-                <p class="page-title">
-                QUERES FAZER PARTE DA NOSSA EQUIPA?
-                    {//intros &&
-                    //intros.filter((intro) => intro.title === 'Title Team Page')
-                    //.map((intro) => intro.metafields && intro.metafields.textos)
-                }
-                    </p>
-                <p class="page-desc">
-                    A nossa equipa é constituída por profissionais da área do design e da comunicação que já colaboraram com várias instituições culturais, como o Linha de Fuga, a Associação Cultural Apura, o coletivo mediático Mundus, o Caminhos do Cinema Português, o Grémio Operário de Coimbra, a Casa das Artes Bissaya Barreto, o Festival Les Siestes Électroniques, Rádio Universidade de Coimbra, Blue House, Revista Gerador, Rimas e Batidas, Teatro Viriato e muito mais. E isto faz-nos acreditar que somos as pessoas certas para ti e o teu projeto. 
-                    {//intros &&
-                    //intros.filter((intro) => intro.title === 'Team Page Desc')
-                    //.map((intro) => intro.metafields && intro.metafields.textos)
-                }
-                    </p>
+            {content && content.map(item => {
+                    if(item.title === 'titleTeamPage'){
+                        return <p class="page-title">{item.metadata.text}</p> 
+                    }
+                })
+            }
+            {content && content.map(item => {
+                    if(item.title === 'descTeamPage'){
+                        return <p class="page-desc">{item.metadata.text}</p> 
+                    }
+                })
+            }
             </div>
             <div class="carousel-team">
             {team && (
