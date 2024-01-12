@@ -1,7 +1,7 @@
 /*----------------------  SEARCH */
 .search-container {
-  margin: 5vh;
-  padding: 2vh;
+  margin: 4vh;
+  padding-top: 2vh;
   font-size: 20px;
   font-family: 'Clash Display' ;
   font-weight: regular;
@@ -9,17 +9,22 @@
   font-size: 12pt;
 }
 
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
 .search-input {
-  width: 80%;
-  /*outline: 1px whitesmoke;*/
+  width: 88%;
+  /*outline: 1px whitesm oke;*/
   outline: none;
   /*outline-style: solid;*/
   border: none;
   border-bottom: 2px solid whitesmoke;
-  padding: 5px;
+ /* padding: 5px;*/
   background-color: #110900;
   color: white;
-  margin: 0 3vh 6vh 2vh;
+  margin: 0 0vh 6vh 2vh;
 }
 
 /*----------------------  TAGS */
@@ -97,7 +102,7 @@
 /*----------------------  TABELA*/
 .table-container {
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
 }
 
@@ -106,7 +111,7 @@
   width: 90%;
   height: auto;
   border-collapse: collapse;
- /* margin: 4vh;*/
+  margin: 4vh;
   font-size: 22px;
   font-family: 'Clash Display' ;
   font-weight: regular;
@@ -164,17 +169,21 @@
   .container {
     font-size: 12px;
     line-height: 2;
-
   }
 
   .search-table {
-    font-size: 10px;
+    font-size: 2vw;
     width: 80%;
     
   }
   .search-input {
-    width: 60%;
+    width: 80vw;
     margin: 0 2vh 4vh 2vh;
   }
-
+  .search-table th:nth-child(2),
+  .search-table td:nth-child(2),
+  .search-table th:nth-child(5),
+  .search-table td:nth-child(5) {
+    display: none; /* tirar TAGS e ANO em mobile*/
+  }
 }

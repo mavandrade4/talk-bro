@@ -153,9 +153,10 @@
     position: relative;
   }
   
-  .overlay-text-work {
+.overlay-text-work {
     display: flex;
-    align-items: flex-start; /* Align to the top */
+   /* align-items: flex-start;*/ /* Align to the top */
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -169,10 +170,15 @@
     transition: opacity 0.3s ease-in-out;
     font-family: 'Clash Display';
     text-transform: uppercase;
+    text-align: center;
+    overflow: hidden; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    white-space: pre-wrap;
   }
   
   .work-item:hover .work-img {
-    opacity: 0.3; /* Adjust the opacity value as needed */
+    opacity: 0.1; /* Adjust the opacity value as needed */
   }
   
   .work-item:hover .overlay-text-work {

@@ -81,7 +81,7 @@ function SearchPage() {
     return (
         <div data-scroll-container>
             <div className="search-container">
-                <div>
+                <div className="search">
                     <label>SEARCH</label>
                     <input
                         className="search-input"
