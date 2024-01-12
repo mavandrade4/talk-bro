@@ -58,7 +58,12 @@ function App() {
   return (
     <div data-scroll-container>
       <div class="hero-container">
-        <img src="img/hero.gif" class='videoH'/>
+        {content && content.map(item => {
+        if(item.title === 'hero_vid'){
+            return <img src={item.metadata.img.url} class='videoH'/> 
+          }
+        })
+      }
       </div>
       <div class="intro">
       {content && content.map(item => {
