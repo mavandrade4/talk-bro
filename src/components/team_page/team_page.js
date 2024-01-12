@@ -79,14 +79,19 @@ function TeamPage() {
         <div data-scroll-container>
             <div class="info-container">
                 <p class="page-title">
-                    {intros &&
-                    intros.filter((intro) => intro.title === 'Title Team Page')
-                    .map((intro) => intro.metafields && intro.metafields.textos)}</p>
-
-                <p class="page-desc"> 
-                    {intros &&
-                    intros.filter((intro) => intro.title === 'Team Page Desc')
-                    .map((intro) => intro.metafields && intro.metafields.textos)}</p>
+                QUERES FAZER PARTE DA NOSSA EQUIPA?
+                    {//intros &&
+                    //intros.filter((intro) => intro.title === 'Title Team Page')
+                    //.map((intro) => intro.metafields && intro.metafields.textos)
+                }
+                    </p>
+                <p class="page-desc">
+                    A nossa equipa é constituída por profissionais da área do design e da comunicação que já colaboraram com várias instituições culturais, como o Linha de Fuga, a Associação Cultural Apura, o coletivo mediático Mundus, o Caminhos do Cinema Português, o Grémio Operário de Coimbra, a Casa das Artes Bissaya Barreto, o Festival Les Siestes Électroniques, Rádio Universidade de Coimbra, Blue House, Revista Gerador, Rimas e Batidas, Teatro Viriato e muito mais. E isto faz-nos acreditar que somos as pessoas certas para ti e o teu projeto. 
+                    {//intros &&
+                    //intros.filter((intro) => intro.title === 'Team Page Desc')
+                    //.map((intro) => intro.metafields && intro.metafields.textos)
+                }
+                    </p>
             </div>
             <div class="carousel-team">
             {team && (

@@ -67,10 +67,12 @@ function App() {
       </div>
       <div class="intro">
         <p>
-        {intros &&
-          intros
-           .filter((intro) => intro.title === 'Descrição Home Page')
-           .map((intro) => intro.metafields && intro.metafields.textos)}
+        A Talk Bro Agency é um coletivo de profissionais de comunicação e design que se quer tornar referência a nível nacional e internacional. Apresentamos estratégias que estabelecem laços fortes entre consumidor e marca, baseadas em quatro pilares: pesquisa, planeamento, aplicação e resultados.
+        {//intros &&
+          //intros
+           //.filter((intro) => intro.title === 'Descrição Home Page')
+           //.map((intro) => intro.metafields && intro.metafields.textos)
+          }
           </p>
       </div>
       <div className="image-grid" id="image-grid">
